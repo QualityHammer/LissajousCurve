@@ -18,10 +18,10 @@ class Oscill {
     }
   }
 
-  move(frame, s) {
+  move(frame, s, addSpeed) {
     // moves the oscillation forward by one
     var piFrame = map(frame, 0, fCount, 0, 2 * PI);
-    var out = sin(this.speed * piFrame);
+    var out = sin(this.speed * addSpeed * piFrame);
     this.output = map(out, -1, 1, -(s / 3), s / 3);
   }
 

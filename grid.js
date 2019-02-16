@@ -39,14 +39,14 @@ class Grid {
     }
   }
 
-  move() {
+  move(addSpeed) {
     // moves x oscillators
     for (let osc of this.x_oscill) {
-      osc.move(this.frame, this.oscSize);
+      osc.move(this.frame, this.oscSize, addSpeed);
     }
     // moves y oscillators
     for (let osc of this.y_oscill) {
-      osc.move(this.frame, this.oscSize)
+      osc.move(this.frame, this.oscSize, addSpeed)
     }
     // moves patetrns based on oscillators
     for (var i = 0; i < this.patterns.length; i++) {
